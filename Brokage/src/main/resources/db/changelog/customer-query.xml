@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="your_name">
+        <createTable tableName="customers">
+            <column name="customer_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="your_name">
+        <insert tableName="customers">
+            <column name="customer_id" value="1"/>
+            <column name="password" value="$2a$10$nq95YZRSrjMBPJ5Gos6rV.pBc2pfI/p9OIJDgtSPu8pbOxLy01QC6"/>
+            <column name="role" value="CUSTOMER"/>
+            <column name="created_at" valueDate="2023-10-06T12:00:00"/>
+            <column name="updated_at" valueDate="2023-10-06T12:00:00"/>
+        </insert>
+        <insert tableName="customers">
+            <column name="customer_id" value="2"/>
+            <column name="password" value="$2a$10$GRjYzKfnsK/g1TdEtE0whu94JimRbWLIrl1FTmgpchNcmpZXb9P1u"/>
+            <column name="role" value="CUSTOMER"/>
+            <column name="created_at" valueDate="2023-10-06T12:00:00"/>
+            <column name="updated_at" valueDate="2023-10-06T12:00:00"/>
+        </insert>
+        <insert tableName="customers">
+            <column name="customer_id" value="2222"/>
+            <column name="password" value="$2a$10$A/G6komlGI5fxqYvtNJJ7ugU44A.BmX0maSoZiGywgjvROVPXU3Ke"/>
+            <column name="role" value="ADMIN"/>
+            <column name="created_at" valueDate="2023-10-06T12:00:00"/>
+            <column name="updated_at" valueDate="2023-10-06T12:00:00"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

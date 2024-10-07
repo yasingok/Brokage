@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <!-- ChangeSet for creating the assets table -->
+    <changeSet id="2" author="your_name">
+        <createTable tableName="assets">
+            <column name="customer_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="asset_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="size" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="usable_size" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="created_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- ChangeSet for inserting initial data into the assets table -->
+    <changeSet id="3" author="your_name">
+        <insert tableName="assets">
+            <column name="customer_id" value="1"/>
+            <column name="asset_name" value="TRY"/>
+            <column name="size" value="10000"/>
+            <column name="usable_size" value="10000"/>
+            <column name="created_at" valueDate="2023-10-06T12:00:00"/>
+            <column name="updated_at" valueDate="2023-10-06T12:00:00"/>
+        </insert>
+        <insert tableName="assets">
+            <column name="customer_id" value="2"/>
+            <column name="asset_name" value="TRY"/>
+            <column name="size" value="20000"/>
+            <column name="usable_size" value="20000"/>
+            <column name="created_at" valueDate="2023-10-06T12:00:00"/>
+            <column name="updated_at" valueDate="2023-10-06T12:00:00"/>
+        </insert>
+        <insert tableName="assets">
+            <column name="customer_id" value="1"/>
+            <column name="asset_name" value="AAPL"/>
+            <column name="size" value="100"/>
+            <column name="usable_size" value="100"/>
+            <column name="created_at" valueDate="2023-10-06T12:00:00"/>
+            <column name="updated_at" valueDate="2023-10-06T12:00:00"/>
+        </insert>
+        <insert tableName="assets">
+            <column name="customer_id" value="2"/>
+            <column name="asset_name" value="AAPL"/>
+            <column name="size" value="100"/>
+            <column name="usable_size" value="100"/>
+            <column name="created_at" valueDate="2023-10-06T12:00:00"/>
+            <column name="updated_at" valueDate="2023-10-06T12:00:00"/>
+        </insert>
+        <insert tableName="assets">
+            <column name="customer_id" value="1"/>
+            <column name="asset_name" value="GOOGL"/>
+            <column name="size" value="50"/>
+            <column name="usable_size" value="50"/>
+            <column name="created_at" valueDate="2023-10-06T12:00:00"/>
+            <column name="updated_at" valueDate="2023-10-06T12:00:00"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
